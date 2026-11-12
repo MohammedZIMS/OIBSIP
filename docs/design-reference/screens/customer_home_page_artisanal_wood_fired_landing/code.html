@@ -1,0 +1,660 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Forno &amp; Farina | Artisanal Wood-Fired Pizza</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;700;800&amp;family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet">
+<!-- Google Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "error-container": "#ffdad6",
+            "card": "#FFFFFF",
+            "inverse-on-surface": "#e8f2ff",
+            "tomato-soft": "#F08A7A",
+            "secondary": "#ac3400",
+            "on-primary-fixed-variant": "#93000a",
+            "pan-raised": "#26333F",
+            "basil": "#485D17",
+            "tertiary-fixed": "#ffdbc9",
+            "on-tertiary-fixed-variant": "#763400",
+            "surface-dim": "#d0dbea",
+            "basil-soft": "#A9C46A",
+            "crust-brown": "#9D5826",
+            "on-secondary-fixed": "#390b00",
+            "inverse-surface": "#26313d",
+            "on-error-container": "#93000a",
+            "secondary-container": "#ff6f3c",
+            "on-primary-fixed": "#410002",
+            "surface-variant": "#d8e4f3",
+            "on-tertiary-fixed": "#321200",
+            "outline": "#916f6b",
+            "surface": "#f7f9ff",
+            "on-secondary-fixed-variant": "#842600",
+            "brick": "#9C2913",
+            "error": "#ba1a1a",
+            "on-surface-variant": "#5c403c",
+            "primary-fixed": "#ffdad6",
+            "plum": "#5A1A35",
+            "crust": "#E9C590",
+            "on-primary": "#ffffff",
+            "on-secondary-container": "#611a00",
+            "on-secondary": "#ffffff",
+            "tomato": "#B80311",
+            "tertiary": "#703100",
+            "on-tertiary": "#ffffff",
+            "on-tertiary-container": "#ffc6a7",
+            "line": "#E4D0AA",
+            "tertiary-fixed-dim": "#ffb68c",
+            "surface-container-highest": "#d8e4f3",
+            "oven-orange": "#D76E25",
+            "secondary-fixed": "#ffdbd0",
+            "rust": "#C34413",
+            "ink-muted": "#6B5A48",
+            "on-primary-container": "#ffc4bd",
+            "on-surface": "#111d27",
+            "ink-muted-dark": "#B9A98C",
+            "primary-fixed-dim": "#ffb4ab",
+            "on-error": "#ffffff",
+            "inverse-primary": "#ffb4ab",
+            "primary": "#8c0009",
+            "surface-bright": "#f7f9ff",
+            "secondary-fixed-dim": "#ffb59d",
+            "surface-container-low": "#edf4ff",
+            "parchment": "#FBF3E4",
+            "pan": "#1D2833",
+            "background": "#f7f9ff",
+            "outline-variant": "#e6bdb8",
+            "tertiary-container": "#944300",
+            "surface-tint": "#be0c15",
+            "surface-container": "#e3effe",
+            "surface-container-high": "#dee9f8",
+            "amber": "#E0983E",
+            "on-background": "#111d27",
+            "surface-container-lowest": "#ffffff"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin": "1rem",
+            "margin-tablet": "2rem",
+            "space-lg": "1.5rem",
+            "space-sm": "0.5rem",
+            "gutter": "1.25rem",
+            "margin-desktop": "3rem",
+            "space-md": "1rem",
+            "space-xl": "2.5rem",
+            "space-xs": "0.25rem",
+            "gutter-desktop": "2rem"
+          },
+          "fontFamily": {
+            "body-lg": ["Hanken Grotesk"],
+            "headline-lg": ["Bricolage Grotesque"],
+            "headline-xl": ["Bricolage Grotesque"],
+            "body-md": ["Hanken Grotesk"],
+            "label-lg": ["Hanken Grotesk"],
+            "headline-lg-mobile": ["Bricolage Grotesque"],
+            "headline-sm": ["Bricolage Grotesque"],
+            "headline-md": ["Bricolage Grotesque"],
+            "label-md": ["Hanken Grotesk"],
+            "headline-xl-mobile": ["Bricolage Grotesque"],
+            "body-sm": ["Hanken Grotesk"],
+            "label-sm": ["Hanken Grotesk"]
+          },
+          "fontSize": {
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "headline-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "700" }],
+            "headline-xl": ["48px", { "lineHeight": "54px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+            "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "headline-lg-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "headline-sm": ["20px", { "lineHeight": "26px", "fontWeight": "700" }],
+            "headline-md": ["26px", { "lineHeight": "32px", "fontWeight": "700" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "headline-xl-mobile": ["34px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "800" }],
+            "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "600" }]
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-parchment text-on-background font-body-md antialiased min-h-screen flex flex-col selection:bg-crust selection:text-pan">
+<!-- TopNavBar (Shared Component) -->
+<header class="sticky top-0 z-50 bg-parchment dark:bg-pan border-b border-line dark:border-pan-raised shadow-sm transition-all duration-200">
+<div class="w-full max-w-7xl mx-auto px-6 py-4 flex items-center justify-between gap-6">
+<!-- Brand & Search Bar Left -->
+<div class="flex items-center gap-6">
+<a class="flex items-center gap-2 group" href="#">
+<span class="material-symbols-outlined text-tomato dark:text-tomato-soft text-3xl group-hover:scale-105 transition-transform" data-icon="local_fire_department">local_fire_department</span>
+<span class="font-headline-lg text-headline-lg font-bold text-tomato dark:text-tomato-soft tracking-tight">Forno &amp; Farina</span>
+</a>
+<!-- Search Bar (on_left as specified) -->
+<div class="hidden lg:flex items-center bg-card rounded-full border border-line px-3.5 py-1.5 focus-within:ring-2 focus-within:ring-oven-orange transition-all">
+<span class="material-symbols-outlined text-ink-muted text-lg mr-2" data-icon="search">search</span>
+<input class="bg-transparent border-0 p-0 text-sm focus:ring-0 placeholder:text-ink-muted text-on-surface w-44 xl:w-56 focus:outline-none" placeholder="Search pies, grains, sauces..." type="text">
+</div>
+</div>
+<!-- Navigation Links -->
+<nav class="hidden md:flex items-center space-x-6">
+<a class="text-tomato dark:text-tomato-soft font-bold border-b-2 border-tomato dark:border-tomato-soft pb-1 font-label-lg text-label-lg transition-colors" href="#menu">Menu</a>
+<a class="text-ink-muted dark:text-ink-muted-dark hover:text-on-background dark:hover:text-inverse-on-surface font-medium font-label-lg text-label-lg transition-colors" href="#builder">Build Custom</a>
+<a class="text-ink-muted dark:text-ink-muted-dark hover:text-on-background dark:hover:text-inverse-on-surface font-medium font-label-lg text-label-lg transition-colors flex items-center gap-1" href="#tracking">
+<span class="inline-block w-2 h-2 rounded-full bg-basil animate-pulse"></span> Active Orders
+        </a>
+<a class="text-ink-muted dark:text-ink-muted-dark hover:text-on-background dark:hover:text-inverse-on-surface font-medium font-label-lg text-label-lg transition-colors" href="#story">Our Story</a>
+</nav>
+<!-- Trailing Cluster -->
+<div class="flex items-center gap-4">
+<!-- Delivery location indicator -->
+<div class="hidden xl:flex items-center text-ink-muted gap-1 text-xs font-label-md">
+<span class="material-symbols-outlined text-crust-brown text-base" data-icon="location_on">location_on</span>
+<span>Deliver to: <strong class="text-on-surface font-semibold">742 Evergreen Terr.</strong></span>
+</div>
+<!-- Icons -->
+<div class="flex items-center gap-1 border-x border-line px-2">
+<button aria-label="Notifications" class="p-2 text-ink-muted hover:text-on-surface hover:bg-crust/20 rounded-full transition-all duration-150">
+<span class="material-symbols-outlined text-xl" data-icon="notifications">notifications</span>
+</button>
+<button aria-label="User Account" class="p-2 text-ink-muted hover:text-on-surface hover:bg-crust/20 rounded-full transition-all duration-150">
+<span class="material-symbols-outlined text-xl" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+<!-- Trailing Primary Action (Cart 3) -->
+<button class="bg-tomato hover:bg-brick text-on-primary font-label-lg text-label-lg px-5 py-2.5 rounded-full flex items-center gap-2 shadow-sm transition-all duration-150 active:scale-95 focus:outline-none focus:ring-2 focus:ring-oven-orange focus:ring-offset-2">
+<span class="material-symbols-outlined text-lg" data-icon="shopping_bag">shopping_bag</span>
+<span>Cart (3)</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative overflow-hidden bg-parchment pt-8 pb-16 lg:py-20 border-b border-line">
+<!-- Atmospheric background blur accents -->
+<div class="absolute -top-32 right-10 w-96 h-96 bg-crust/30 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-24 left-1/4 w-80 h-80 bg-oven-orange/15 rounded-full blur-3xl pointer-events-none"></div>
+<div class="w-full max-w-7xl mx-auto px-6">
+<!-- Live Status Pill -->
+<div class="inline-flex items-center gap-2.5 bg-card border border-line px-4 py-2 rounded-full mb-6 shadow-sm">
+<span class="flex h-2.5 w-2.5 relative">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-oven-orange opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-oven-orange"></span>
+</span>
+<span class="font-label-sm text-label-sm text-pan tracking-wide uppercase font-semibold">
+          🔥 Beechwood Hearth Active • Today's Ferment: Batch #42 (98% Hydration)
+        </span>
+</div>
+<!-- Split Hero Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-7 space-y-6">
+<h1 class="font-headline-xl text-headline-xl text-pan leading-tight font-extrabold">
+            Wood, Flour &amp; Time.<br>
+<span class="text-tomato">Pure Neapolitan</span> Perfection.
+          </h1>
+<p class="font-body-lg text-body-lg text-ink-muted max-w-2xl">
+            Naturally leavened for 48 hours using wild sourdough biga and heritage stone-milled grains. Flash-charred at 900°F over sustainably harvested seasoned beechwood in under 90 seconds. Topped strictly with San Marzano D.O.P. and Campania Fior di Latte.
+          </p>
+<!-- Metrics Micro-Bar -->
+<div class="grid grid-cols-3 gap-4 py-4 border-y border-line max-w-xl">
+<div>
+<p class="font-headline-sm text-headline-sm text-crust-brown font-bold">48 Hours</p>
+<p class="font-label-sm text-label-sm text-ink-muted">Cold Fermentation</p>
+</div>
+<div>
+<p class="font-headline-sm text-headline-sm text-crust-brown font-bold">900°F</p>
+<p class="font-label-sm text-label-sm text-ink-muted">Beechwood Hearth</p>
+</div>
+<div>
+<p class="font-headline-sm text-headline-sm text-crust-brown font-bold">100%</p>
+<p class="font-label-sm text-label-sm text-ink-muted">D.O.P. Certified</p>
+</div>
+</div>
+<!-- Dual CTAs -->
+<div class="flex flex-wrap items-center gap-4 pt-2">
+<a class="bg-tomato hover:bg-brick text-on-primary font-label-lg text-label-lg px-8 py-4 rounded-full font-bold shadow-md hover:shadow transition-all duration-150 active:scale-95 flex items-center gap-3 focus:outline-none focus:ring-2 focus:ring-oven-orange" href="#menu">
+<span>Explore Menu &amp; Order Now</span>
+<span class="material-symbols-outlined text-lg" data-icon="arrow_forward">arrow_forward</span>
+</a>
+<a class="bg-transparent hover:bg-crust/20 text-pan border border-crust-brown font-label-lg text-label-lg px-7 py-4 rounded-full font-semibold transition-all duration-150 active:scale-95 flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-oven-orange" href="#builder">
+<span class="material-symbols-outlined text-lg text-crust-brown" data-icon="tune">tune</span>
+<span>Build Custom Pizza</span>
+</a>
+</div>
+</div>
+<!-- Hero Visual Showcase -->
+<div class="lg:col-span-5 relative">
+<div class="relative mx-auto max-w-md lg:max-w-none">
+<!-- Glow under canvas -->
+<div class="absolute inset-0 bg-oven-orange/20 rounded-2xl filter blur-xl transform rotate-3 scale-95"></div>
+<div class="relative bg-card rounded-2xl border border-line p-4 shadow-lg overflow-hidden">
+<img class="w-full h-80 lg:h-96 object-cover rounded-xl" data-alt="An authentic artisanal Neapolitan wood-fired pizza just lifted from a 900-degree brick oven. The blistered sourdough cornicione crust is deeply leopard-spotted with smoky char. Glossy San Marzano tomato sauce pools beneath rich melted Campania Fior di Latte and fresh vibrant green basil leaves, bathed in warm, soft kitchen light with rich organic textures." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDoMnaDEUAChZTdW7YB8iB827e6eLN6M1MhAV1JJyekUVdVUOywzuFxz5artc3YztcZ2yfnTJmo7jevMxUasCYeci8w6tWbhxg0eqcPfIXZFDX0zhNIS4EPZcuH5Df_r7RCNuvdMrr65cwz_6_P4sKrMS3dd5tGkCQEGCA7zrJTmcsl_FWka-Xq7mA_WHpZN5GE3cH7QieZakAKZilwkiEPs2VtzNViy_WLW_SkhNj">
+<!-- Floating Pill Overlay -->
+<div class="absolute bottom-7 left-7 right-7 bg-pan/90 backdrop-blur-md border border-line/40 text-parchment rounded-xl p-3.5 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-oven-orange/20 border border-oven-orange flex items-center justify-center text-oven-orange">
+<span class="material-symbols-outlined text-xl" data-icon="local_pizza">local_pizza</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-sm text-crust font-bold">Margherita Verace D.O.P.</h4>
+<p class="font-label-sm text-label-sm text-ink-muted-dark">Biga Sourdough • Basil • Extra Virgin Olive Oil</p>
+</div>
+</div>
+<span class="font-headline-sm text-base text-parchment font-bold">₹569</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Craft Pillars Section -->
+<section class="py-20 bg-parchment border-b border-line">
+<div class="w-full max-w-7xl mx-auto px-6">
+<div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+<span class="font-label-md text-label-md uppercase tracking-wider text-crust-brown font-bold">Our Philosophy &amp; Discipline</span>
+<h2 class="font-headline-lg text-headline-lg text-pan">Uncompromising Old-World Integrity</h2>
+<p class="font-body-md text-body-md text-ink-muted">We refuse modern shortcuts, chemical dough conditioners, and conveyor belt ovens. Every pie follows century-old Neapolitan disciplinary rules.</p>
+</div>
+<!-- 3-Column Pillar Bento -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Pillar 1 -->
+<div class="bg-card rounded-xl border border-line p-8 space-y-4 hover:border-crust-brown transition-all duration-200">
+<div class="w-12 h-12 rounded-xl bg-crust/35 border border-crust-brown flex items-center justify-center text-crust-brown">
+<span class="material-symbols-outlined text-2xl" data-icon="grain">grain</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-pan">Organic Heritage Grains</h3>
+<p class="font-body-md text-body-md text-ink-muted">
+            Stone-milled ancient wheat varieties harvested from zero-additive regeneratively farmed soils. Preserves wheat germ oil, natural enzymes, and deep nutty aroma while remaining gentle on digestion.
+          </p>
+<div class="pt-2 flex items-center text-xs font-label-md text-crust-brown font-semibold">
+<span>Tipo 1 &amp; Khorasan Heritage Blend</span>
+</div>
+</div>
+<!-- Pillar 2 -->
+<div class="bg-card rounded-xl border border-line p-8 space-y-4 hover:border-crust-brown transition-all duration-200">
+<div class="w-12 h-12 rounded-xl bg-crust/35 border border-crust-brown flex items-center justify-center text-crust-brown">
+<span class="material-symbols-outlined text-2xl" data-icon="schedule">schedule</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-pan">48-Hour Cold Biga Fermentation</h3>
+<p class="font-body-md text-body-md text-ink-muted">
+            Our wild sourdough starter is fed daily and matured through a 48-hour two-stage cold cellar fermentation. Yields an impossibly light, cloud-like open crumb with high digestibility and crisp crust blisters.
+          </p>
+<div class="pt-2 flex items-center text-xs font-label-md text-crust-brown font-semibold">
+<span>Natural Yeast • Zero Bloat</span>
+</div>
+</div>
+<!-- Pillar 3 -->
+<div class="bg-card rounded-xl border border-line p-8 space-y-4 hover:border-crust-brown transition-all duration-200">
+<div class="w-12 h-12 rounded-xl bg-crust/35 border border-crust-brown flex items-center justify-center text-crust-brown">
+<span class="material-symbols-outlined text-2xl" data-icon="fireplace">fireplace</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-pan">900°F Beechwood Hearth</h3>
+<p class="font-body-md text-body-md text-ink-muted">
+            Hand-built refractory brick oven fueled exclusively by split seasoned beechwood and olive branches. Pies are flash-blistered in exactly 90 seconds, caramelizing crust starches while locking in toppings' moisture.
+          </p>
+<div class="pt-2 flex items-center text-xs font-label-md text-crust-brown font-semibold">
+<span>Wood-Fired Cornicione Leopard Spots</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Menu Showcase -->
+<section class="py-20 bg-parchment" id="menu">
+<div class="w-full max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+<div class="space-y-2">
+<span class="font-label-md text-label-md uppercase tracking-wider text-tomato font-bold">Wood-Fired Standards</span>
+<h2 class="font-headline-lg text-headline-lg text-pan">Signature Pies from the Hearth</h2>
+<p class="font-body-md text-body-md text-ink-muted">Hand-stretched to order, strictly baked to order. Never reheated.</p>
+</div>
+<!-- Category Filter Pills -->
+<div class="flex items-center gap-2 flex-wrap">
+<button class="bg-crust/35 border-1.5 border-crust-brown text-pan font-label-sm text-label-sm px-4 py-1.5 rounded-full font-semibold">All Pies</button>
+<button class="bg-card border border-line hover:border-crust-brown text-ink-muted font-label-sm text-label-sm px-4 py-1.5 rounded-full">Red (Rosso)</button>
+<button class="bg-card border border-line hover:border-crust-brown text-ink-muted font-label-sm text-label-sm px-4 py-1.5 rounded-full">White (Bianca)</button>
+<button class="bg-card border border-line hover:border-crust-brown text-ink-muted font-label-sm text-label-sm px-4 py-1.5 rounded-full">Truffle &amp; Aged</button>
+</div>
+</div>
+<!-- Pizza Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Pizza Card 1 -->
+<div class="bg-card rounded-lg border border-line overflow-hidden flex flex-col justify-between group hover:border-crust-brown transition-all duration-200">
+<div>
+<div class="relative h-48 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Diavola Calabrese artisanal pizza with spicy curled soppressata salami cups releasing hot chili oil, wood-charred cornicione crust, fresh torn mozzarella, and hot honey drizzle on parchment paper in warm rustic natural light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgs9Z_ReDMBuv8kfWN2faQj1AM_Os0zocgiWJW-yK6rq2qVM1GdY6cRFzqrGrHAD70nsh2bPDaQw7t7NV4KlkIg68_M1M33ZyZzc0J39JXy1cGNfegeuGHcVkdS9J3W4HdG04TYwPD1vT_PdibqHQ4rFvIO13uslhZT3qHACE-QktmdSwXNsEHCTMA2bYYQcKSPx0S_iHl8KUGvOmJNzxsnXLy9Yz-x51EwMpG9zBf">
+<div class="absolute top-3 left-3 bg-tomato text-on-primary font-label-sm text-label-sm font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">
+                Spicy
+              </div>
+<div class="absolute top-3 right-3 bg-basil/15 border border-basil text-basil font-label-sm text-label-sm font-semibold px-2 py-0.5 rounded-full">
+                In Stock
+              </div>
+</div>
+<div class="p-5 space-y-2">
+<div class="flex justify-between items-baseline">
+<h3 class="font-headline-sm text-headline-sm text-pan">Diavola Calabrese</h3>
+<span class="font-label-lg text-label-lg font-bold text-tomato">₹629</span>
+</div>
+<p class="font-body-sm text-body-sm text-ink-muted line-clamp-2">
+                San Marzano D.O.P., Calabrian spicy spianata salami, smoked provolone, wild oregano, infused chili hot honey.
+              </p>
+</div>
+</div>
+<div class="p-5 pt-0">
+<button class="w-full bg-tomato hover:bg-brick text-on-primary font-label-sm text-label-sm font-bold py-2.5 rounded-full transition-colors active:scale-95 flex items-center justify-center gap-1.5 focus:outline-none focus:ring-2 focus:ring-oven-orange">
+<span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+<span>Add to Order</span>
+</button>
+</div>
+</div>
+<!-- Pizza Card 2 -->
+<div class="bg-card rounded-lg border border-line overflow-hidden flex flex-col justify-between group hover:border-crust-brown transition-all duration-200">
+<div>
+<div class="relative h-48 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Tartufo and Funghi Rustica white pizza topped with caramelized wild forest chantrelles and cremini mushrooms, whipped fontina cheese, thyme sprigs, and fragrant black truffle oil shimmer, baked to perfection on a blistered crust." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAI7MesXwARGhbKQRJkSyTZWYPRGRxcq5JIQ8C-R2QOFwy1S17t8vbHhZ-5A28qxXghWjfHRYIxtPKGQckFf8m2xUJPPaoYr13iE326qsR1lRZ5HnaNYiu7HaG-GmYjZtyFgdHS9NzaSSfnHV87194Sh6BqoebITowdk5D6BIMfd9dA9LiW5NLZRUQHxARXs5y8nwUj2uhvdX-IhGv8BHx40W9DTzVYRd9Cwq3G2Wfo">
+<div class="absolute top-3 left-3 bg-crust/50 border border-crust-brown text-pan font-label-sm text-label-sm font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">
+                Truffle
+              </div>
+<div class="absolute top-3 right-3 bg-basil/15 border border-basil text-basil font-label-sm text-label-sm font-semibold px-2 py-0.5 rounded-full">
+                In Stock
+              </div>
+</div>
+<div class="p-5 space-y-2">
+<div class="flex justify-between items-baseline">
+<h3 class="font-headline-sm text-headline-sm text-pan">Tartufo &amp; Funghi</h3>
+<span class="font-label-lg text-label-lg font-bold text-tomato">₹689</span>
+</div>
+<p class="font-body-sm text-body-sm text-ink-muted line-clamp-2">
+                Cremini &amp; oyster wild mushrooms, aged Fontina D.O.P., roasted garlic crema, fresh thyme, Umbrian black truffle glaze.
+              </p>
+</div>
+</div>
+<div class="p-5 pt-0">
+<button class="w-full bg-tomato hover:bg-brick text-on-primary font-label-sm text-label-sm font-bold py-2.5 rounded-full transition-colors active:scale-95 flex items-center justify-center gap-1.5 focus:outline-none focus:ring-2 focus:ring-oven-orange">
+<span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+<span>Add to Order</span>
+</button>
+</div>
+</div>
+<!-- Pizza Card 3 -->
+<div class="bg-card rounded-lg border border-line overflow-hidden flex flex-col justify-between group hover:border-crust-brown transition-all duration-200">
+<div>
+<div class="relative h-48 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Classic Margherita Verace D.O.P. pizza freshly lifted from wood-fired oven with bubbling molten buffalo mozzarella, bright crushed Italian San Marzano tomatoes, fresh green basil leaves, and golden extra virgin olive oil." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAp0u6YBtIsYlq9rRXVmFOj6Ao0bZ8Q-XJrwUTnxhhuFz1m0GqLuYHFIyAZb3NSTS83T7q1lIBZs1e-_CeTJmveNVkDimukb_h8t2bo2O5zX2WRvs1GUgcGgSxGW51mUAdlvT7p5NEb1vT2SqbEIPkog07ya3QpbW4Oz1v2CNG6OJpCfrb3ImN8g-2fRfQlH5qYDEVzEgGs5007cl-1BUVylregrds8-VchQkEm3Vcp">
+<div class="absolute top-3 left-3 bg-basil/20 border border-basil text-basil font-label-sm text-label-sm font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">
+                Classic
+              </div>
+<div class="absolute top-3 right-3 bg-basil/15 border border-basil text-basil font-label-sm text-label-sm font-semibold px-2 py-0.5 rounded-full">
+                In Stock
+              </div>
+</div>
+<div class="p-5 space-y-2">
+<div class="flex justify-between items-baseline">
+<h3 class="font-headline-sm text-headline-sm text-pan">Margherita Verace</h3>
+<span class="font-label-lg text-label-lg font-bold text-tomato">₹569</span>
+</div>
+<p class="font-body-sm text-body-sm text-ink-muted line-clamp-2">
+                San Marzano D.O.P. crushed plum tomatoes, Campania buffalo mozzarella, garden sweet basil, cold-pressed Frantoio olive oil.
+              </p>
+</div>
+</div>
+<div class="p-5 pt-0">
+<button class="w-full bg-tomato hover:bg-brick text-on-primary font-label-sm text-label-sm font-bold py-2.5 rounded-full transition-colors active:scale-95 flex items-center justify-center gap-1.5 focus:outline-none focus:ring-2 focus:ring-oven-orange">
+<span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+<span>Add to Order</span>
+</button>
+</div>
+</div>
+<!-- Pizza Card 4 -->
+<div class="bg-card rounded-lg border border-line overflow-hidden flex flex-col justify-between group hover:border-crust-brown transition-all duration-200">
+<div>
+<div class="relative h-48 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Quattro Formaggi Bianca gourmet pizza with molten Gorgonzola dolce, silky Fior di Latte, aged Parmigiano Reggiano crisps, and smoked Scamorza, sprinkled with fresh rosemary needles and toasted walnuts on light parchment paper." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVpIFGT45PX3pPRSyCsf8bZOfJgm8t4U1zSSA2mifh-GdCmn16fI9Ro-sbQjk8uhdSwRevzQ39-WZRQbpMr4ebHj3WteD7lnKNe6ohhpfD63MIVoCIZYQwc0E5_rILrQYy1aX-J5S9_dsKrQzvl3bzWN2wFts7AMcNkQqgShf5xuWJFgbdm41ONTgCKTYie_UCM2meTPQXGpWd2PnySk7pZafk0GUB8wPhgvh3JS3_">
+<div class="absolute top-3 left-3 bg-amber/20 border border-amber text-pan font-label-sm text-label-sm font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">
+                Vegetarian
+              </div>
+<div class="absolute top-3 right-3 bg-amber/20 border border-amber text-pan font-label-sm text-label-sm font-semibold px-2 py-0.5 rounded-full">
+                Low Stock
+              </div>
+</div>
+<div class="p-5 space-y-2">
+<div class="flex justify-between items-baseline">
+<h3 class="font-headline-sm text-headline-sm text-pan">Quattro Formaggi</h3>
+<span class="font-label-lg text-label-lg font-bold text-tomato">₹649</span>
+</div>
+<p class="font-body-sm text-body-sm text-ink-muted line-clamp-2">
+                Creamy Fior di Latte, Gorgonzola Dolce, 24-Month Parmigiano-Reggiano, smoked provola, organic wildflower honey, toasted walnuts.
+              </p>
+</div>
+</div>
+<div class="p-5 pt-0">
+<button class="w-full bg-tomato hover:bg-brick text-on-primary font-label-sm text-label-sm font-bold py-2.5 rounded-full transition-colors active:scale-95 flex items-center justify-center gap-1.5 focus:outline-none focus:ring-2 focus:ring-oven-orange">
+<span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+<span>Add to Order</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive 4-Step Builder Teaser Banner -->
+<section class="py-16 bg-pan text-parchment relative overflow-hidden border-y border-pan-raised" id="builder">
+<!-- Atmospheric subtle background glow -->
+<div class="absolute -right-24 -bottom-24 w-96 h-96 bg-oven-orange/15 rounded-full blur-3xl pointer-events-none"></div>
+<div class="w-full max-w-7xl mx-auto px-6 relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+<div class="lg:col-span-5 space-y-4">
+<div class="inline-flex items-center gap-2 bg-pan-raised px-3 py-1 rounded-full border border-line/20">
+<span class="material-symbols-outlined text-oven-orange text-sm" data-icon="outdoor_grill">outdoor_grill</span>
+<span class="font-label-sm text-label-sm text-crust tracking-wider uppercase">Pizzaiolo Workshop</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-parchment">
+            Step Into the Hearth.<br>
+<span class="text-tomato-soft">Build Your Own Custom Pie.</span>
+</h2>
+<p class="font-body-md text-body-md text-ink-muted-dark">
+            Take total creative command with our real-time interactive hearth builder. Choose ancient heritage doughs, stone-ground sauces, imported raw milks, and farm-fresh artisanal finishes.
+          </p>
+<div class="pt-4">
+<a class="inline-flex items-center gap-3 bg-tomato hover:bg-brick text-on-primary font-label-lg text-label-lg px-8 py-3.5 rounded-full font-bold transition-all shadow-md active:scale-95 focus:outline-none focus:ring-2 focus:ring-oven-orange" href="#">
+<span>Launch 4-Step Pizza Builder</span>
+<span class="material-symbols-outlined text-lg" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- 4-Step Interactive Tiles Showcase -->
+<div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+<!-- Step 1 -->
+<div class="bg-pan-raised p-5 rounded-xl border border-line/20 hover:border-crust transition-all">
+<div class="flex items-center justify-between mb-3">
+<span class="font-headline-sm text-base text-crust font-bold">01. The Base</span>
+<span class="material-symbols-outlined text-oven-orange" data-icon="bakery_dining">bakery_dining</span>
+</div>
+<h4 class="font-headline-sm text-sm text-parchment mb-1">5 Heritage Fermentations</h4>
+<p class="font-body-sm text-xs text-ink-muted-dark">48hr Biga, Khorasan Whole Grain, 100% Farro, Gluten-Friendly Spelt, or Charcoal Nero.</p>
+</div>
+<!-- Step 2 -->
+<div class="bg-pan-raised p-5 rounded-xl border border-line/20 hover:border-crust transition-all">
+<div class="flex items-center justify-between mb-3">
+<span class="font-headline-sm text-base text-crust font-bold">02. The Sauce</span>
+<span class="material-symbols-outlined text-tomato-soft" data-icon="soup_kitchen">soup_kitchen</span>
+</div>
+<h4 class="font-headline-sm text-sm text-parchment mb-1">Crushed San Marzano D.O.P.</h4>
+<p class="font-body-sm text-xs text-ink-muted-dark">Volcanic soil red pomodori, roasted garlic crema, Genovese pine nut pesto, or white truffle base.</p>
+</div>
+<!-- Step 3 -->
+<div class="bg-pan-raised p-5 rounded-xl border border-line/20 hover:border-crust transition-all">
+<div class="flex items-center justify-between mb-3">
+<span class="font-headline-sm text-base text-crust font-bold">03. The Curd</span>
+<span class="material-symbols-outlined text-amber" data-icon="lunch_dining">lunch_dining</span>
+</div>
+<h4 class="font-headline-sm text-sm text-parchment mb-1">Campania Fior di Latte</h4>
+<p class="font-body-sm text-xs text-ink-muted-dark">Buffalo Mozzarella from Caserta, 24-Month Parmigiano, aged Pecorino Romano, or plant-based cashew curd.</p>
+</div>
+<!-- Step 4 -->
+<div class="bg-pan-raised p-5 rounded-xl border border-line/20 hover:border-crust transition-all">
+<div class="flex items-center justify-between mb-3">
+<span class="font-headline-sm text-base text-crust font-bold">04. The Toppings</span>
+<span class="material-symbols-outlined text-basil-soft" data-icon="potted_plant">potted_plant</span>
+</div>
+<h4 class="font-headline-sm text-sm text-parchment mb-1">Artisan Sourced Finishes</h4>
+<p class="font-body-sm text-xs text-ink-muted-dark">Spianata Calabrese, wood-charred artichoke hearts, foraged chanterelles, hot honey, or fresh micro-basil.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Pizzaiolo Quote & Heritage Story Section -->
+<section class="py-20 bg-parchment border-b border-line" id="story">
+<div class="w-full max-w-7xl mx-auto px-6">
+<div class="bg-card rounded-2xl border border-line overflow-hidden shadow-sm">
+<div class="grid grid-cols-1 lg:grid-cols-12 items-stretch">
+<div class="lg:col-span-5 relative min-h-[360px] lg:min-h-full">
+<img class="w-full h-full object-cover" data-alt="Master Pizzaiolo Matteo Rossi wearing flour-dusted linen apron standing before a blazing refractory brick wood-fired hearth. He is gently inspecting a peel with rising dough in atmospheric warm cinematic lighting, radiating quiet artisan mastery and old-world passion." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEvPs0z-H93vsgOFYFDZDLllNqJO2O3TnJgS7I4tOcDF2qu_ohCqAUvNak_7s41DylR0kvnXYujajG03b2dSvvfivd1DjH58aGoKW1bRBBlLuzlgDZh4nT6OKjWpBrBswFBBLjOs8ZauV3rwYZ021m4i2gUszj2neMs6eVyODZkFkRWjG_tioHI-eejCu4jOH-_xk8bJXbZarKXEntqGrSYu9F6UJI33850OJE7vIP">
+<div class="absolute bottom-4 left-4 bg-pan/90 backdrop-blur-md px-4 py-2 rounded-lg border border-line/20 text-parchment">
+<p class="font-headline-sm text-xs text-crust font-bold">Matteo Rossi</p>
+<p class="font-label-sm text-[11px] text-ink-muted-dark">Founder &amp; 3rd Gen Master Pizzaiolo</p>
+</div>
+</div>
+<div class="lg:col-span-7 p-8 md:p-12 lg:p-16 flex flex-col justify-center space-y-6">
+<span class="material-symbols-outlined text-4xl text-crust-brown" data-icon="format_quote">format_quote</span>
+<blockquote class="font-headline-md text-headline-md text-pan leading-snug font-bold">
+              “True Neapolitan pizza cannot be rushed by industrial yeast or electronic heaters. It demands 48 hours of patience, cold wild fermentation, and the living fury of a 900°F beechwood flame.”
+            </blockquote>
+<p class="font-body-md text-body-md text-ink-muted">
+              Born in the shadow of Mount Vesuvius, Matteo brought his family’s century-old biga mother starter to Forno &amp; Farina. Every morning at 5:00 AM, our bakers hand-mill organic heritage wheat grains and hand-stretch every dough ball. We do not compromise, because great dough is a sacred covenant with time.
+            </p>
+<div class="pt-4 flex items-center gap-8 border-t border-line">
+<div>
+<span class="block font-headline-sm text-lg font-bold text-pan">AVPN Certified</span>
+<span class="font-label-sm text-xs text-ink-muted">Associazione Verace Pizza Napoletana</span>
+</div>
+<div class="w-px h-8 bg-line"></div>
+<div>
+<span class="block font-headline-sm text-lg font-bold text-pan">Zero Preservatives</span>
+<span class="font-label-sm text-xs text-ink-muted">100% Clean Label Organic</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Live Tracking & Reliability Promise -->
+<section class="py-20 bg-parchment" id="tracking">
+<div class="w-full max-w-7xl mx-auto px-6">
+<div class="bg-plum rounded-2xl p-8 lg:p-12 text-crust shadow-lg relative overflow-hidden border border-line/20">
+<div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<div class="lg:col-span-6 space-y-4">
+<div class="inline-flex items-center gap-2 bg-pan-raised/60 text-parchment px-3 py-1 rounded-full text-xs font-label-sm">
+<span class="inline-block w-2 h-2 rounded-full bg-oven-orange animate-ping"></span>
+<span>Live Hearth-to-Door Telemetry</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-parchment">
+              Real-Time Oven &amp; Hearth Tracking.
+            </h2>
+<p class="font-body-md text-body-md text-crust/90">
+              Every pie is equipped with a digital kitchen ticket. Track when your dough is hand-stretched, entering the 900°F beechwood hearth, and boxed into thermally insulated ventilated steam containers.
+            </p>
+<div class="pt-2 flex items-center gap-3">
+<button class="bg-tomato hover:bg-brick text-on-primary font-label-md text-label-md px-6 py-3 rounded-full font-bold transition-all active:scale-95 focus:outline-none focus:ring-2 focus:ring-oven-orange">
+                Track Active Order #4109
+              </button>
+<button class="border border-crust/40 text-parchment hover:bg-pan-raised/40 font-label-md text-label-md px-5 py-3 rounded-full transition-all">
+                Our Heat-Lock Guarantee
+              </button>
+</div>
+</div>
+<!-- Live Step Status Diagram Card -->
+<div class="lg:col-span-6 bg-pan rounded-xl p-6 border border-line/30 space-y-6">
+<div class="flex items-center justify-between border-b border-pan-raised pb-4">
+<div>
+<span class="font-label-sm text-xs text-ink-muted-dark">Current Status</span>
+<h4 class="font-headline-sm text-sm text-parchment font-bold">Order #4109 • Table / Delivery</h4>
+</div>
+<span class="bg-basil/20 border border-basil text-basil-soft font-label-sm text-xs font-bold px-3 py-1 rounded-full uppercase">
+                In Beechwood Oven (60s Left)
+              </span>
+</div>
+<!-- Stepper -->
+<div class="space-y-4">
+<!-- Step A -->
+<div class="flex items-center gap-4">
+<div class="w-8 h-8 rounded-full bg-basil text-on-primary flex items-center justify-center font-bold text-xs">
+<span class="material-symbols-outlined text-sm" data-icon="check">check</span>
+</div>
+<div class="flex-1">
+<p class="text-sm font-semibold text-parchment">Hand-Stretched &amp; Sauced</p>
+<p class="text-xs text-ink-muted-dark">48hr Biga dough paired with crushed San Marzano D.O.P.</p>
+</div>
+<span class="text-xs text-ink-muted-dark">18:42</span>
+</div>
+<!-- Step B (Active) -->
+<div class="flex items-center gap-4">
+<div class="w-8 h-8 rounded-full bg-oven-orange text-on-primary flex items-center justify-center font-bold text-xs animate-pulse">
+<span class="material-symbols-outlined text-sm" data-icon="local_fire_department">local_fire_department</span>
+</div>
+<div class="flex-1">
+<p class="text-sm font-semibold text-crust">900°F Beechwood Hearth Bake</p>
+<p class="text-xs text-ink-muted-dark">Flash blistered cornicione under watchful Pizzaiolo eye</p>
+</div>
+<span class="text-xs text-oven-orange font-bold">18:45</span>
+</div>
+<!-- Step C -->
+<div class="flex items-center gap-4 opacity-50">
+<div class="w-8 h-8 rounded-full bg-pan-raised text-ink-muted-dark flex items-center justify-center font-bold text-xs border border-line/20">
+<span class="material-symbols-outlined text-sm" data-icon="moped">moped</span>
+</div>
+<div class="flex-1">
+<p class="text-sm font-semibold text-parchment">Steam-Vent Boxed &amp; Out for Dispatch</p>
+<p class="text-xs text-ink-muted-dark">Heated insulated case to preserve crisp cornicione</p>
+</div>
+<span class="text-xs text-ink-muted-dark">18:50</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer (Shared Component) -->
+<footer class="mt-auto bg-pan border-t border-pan-raised text-crust">
+<div class="w-full max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row items-center justify-between gap-6">
+<!-- Logo & Copyright -->
+<div class="flex flex-col items-center md:items-start gap-2">
+<a class="font-headline-md text-headline-md font-bold text-tomato-soft flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-2xl text-oven-orange" data-icon="local_fire_department">local_fire_department</span>
+<span>Forno &amp; Farina</span>
+</a>
+<p class="font-body-sm text-body-sm text-ink-muted-dark text-center md:text-left">
+          © 2025 Forno &amp; Farina Artisanal Pizza Co. Wood-fired daily with organic heritage grains.
+        </p>
+</div>
+<!-- Links Cluster -->
+<nav class="flex flex-wrap justify-center md:justify-end gap-x-6 gap-y-2">
+<a class="font-label-sm text-label-sm text-crust hover:text-amber transition-colors duration-150" href="#">Artisanal Standards</a>
+<a class="font-label-sm text-label-sm text-crust hover:text-amber transition-colors duration-150" href="#">Dietary &amp; Allergen Guide</a>
+<a class="font-label-sm text-label-sm text-crust hover:text-amber transition-colors duration-150" href="#">Store Locator</a>
+<a class="font-label-sm text-label-sm text-crust hover:text-amber transition-colors duration-150" href="#">Kitchen Careers</a>
+<a class="font-label-sm text-label-sm text-crust hover:text-amber transition-colors duration-150" href="#">Privacy Policy</a>
+<a class="font-label-sm text-label-sm text-crust hover:text-amber transition-colors duration-150" href="#">Terms of Service</a>
+</nav>
+</div>
+</footer>
+
+
+</body></html>

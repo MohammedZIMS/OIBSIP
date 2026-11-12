@@ -1,0 +1,6 @@
+node_modules
+dist
+.env
+.env.example
+CLAUDE.md
+OASIS INFOBYTE—Task List.pdf

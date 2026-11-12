@@ -1,0 +1,9 @@
+:root {
+  --bg: #FBF3E4;
+  --surface: #FFFFFF;
+  --text: #1D2833;
+  --text-muted: #6B5A48;
+  --border: #E4D0AA;
+  --focus: #5A1A35;
+  color-scheme: light;
+}
