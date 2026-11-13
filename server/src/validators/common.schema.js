@@ -1,0 +1,9 @@
+import { z } from 'zod';
+
+export const objectId = z.string().regex(/^[a-f\d]{24}$/i, 'must be a valid id');
+export const idParams = z.object({ id: objectId });
+export const pagination = z.object({
+  page: z.coerce.number().int().min(1).default(1),
+  limit: z.coerce.number().int().min(1).max(100).default(20),
+});
+export const searchText = z.string().trim().min(1).max(60);
