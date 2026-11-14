@@ -1,5 +1,6 @@
 // Palette from the reference image and docs/DESIGN.md. Use these tokens only; no one-off hex values.
 export default {
+  darkMode: ['selector', '[data-theme="dark"]'],
   content: ['./index.html', './src/**/*.{js,jsx}'],
   theme: {
     extend: {

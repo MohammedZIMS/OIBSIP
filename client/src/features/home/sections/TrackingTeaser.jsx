@@ -11,7 +11,7 @@ export default function TrackingTeaser() {
         </p>
         <div className="mt-8">
           <p className="mb-3 text-sm font-semibold text-crust">Example order</p>
-          <OrderStepper current={1} />
+          <OrderStepper current={1} dark />
         </div>
         <div className="mt-8">
           <Button to="/orders" variant="outlineLight">Track an active order</Button>

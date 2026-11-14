@@ -9,7 +9,8 @@ export const bearer = (req) => {
 };
 
 // A token is stale if the password changed after it was issued.
-export const issuedBeforeChange = (payload, changedAt) => Boolean(changedAt && payload.iat * 1000 < changedAt.getTime());
+// JWT iat is in whole seconds, so compare against the change time floored to seconds (a token issued right after the change stays valid).
+export const issuedBeforeChange = (payload, changedAt) => Boolean(changedAt && payload.iat < Math.floor(changedAt.getTime() / 1000));
 
 /** Requires a valid customer JWT; sets req.user. */
 export async function auth(req, _res, next) {

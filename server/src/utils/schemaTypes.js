@@ -1,5 +1,6 @@
 // Reusable Mongoose field definitions.
-const isInt = { validator: Number.isInteger, message: '{PATH} must be a whole number' };
+// null/undefined are allowed (optional fields); anything else must be a whole number
+const isInt = { validator: (v) => v == null || Number.isInteger(v), message: '{PATH} must be a whole number' };
 
 /** Integer paise (never floats). */
 export const paise = (extra = {}) => ({ type: Number, min: 0, validate: isInt, ...extra });

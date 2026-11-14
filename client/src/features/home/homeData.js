@@ -1,45 +1,6 @@
 // Static sample data. Replace with GET /pizzas (Phase 3). Prices are integer paise.
 export const FILTERS = ['All', 'Rosso', 'Bianca', 'Truffle', 'Spicy'];
 
-export const PIZZAS = [
-  {
-    id: 'diavola',
-    name: 'Diavola Calabrese',
-    price: 62900,
-    art: 'diavola',
-    stock: 'ok',
-    tags: ['Rosso', 'Spicy'],
-    description: 'San Marzano tomato, spicy salami, smoked provolone, wild oregano and chili hot honey.',
-  },
-  {
-    id: 'tartufo',
-    name: 'Tartufo & Funghi',
-    price: 68900,
-    art: 'tartufo',
-    stock: 'ok',
-    tags: ['Bianca', 'Truffle'],
-    description: 'Cremini and oyster mushrooms, aged fontina, roasted garlic crema, thyme and truffle glaze.',
-  },
-  {
-    id: 'margherita',
-    name: 'Margherita Verace',
-    price: 56900,
-    art: 'margherita',
-    stock: 'ok',
-    tags: ['Rosso'],
-    description: 'Crushed San Marzano tomatoes, buffalo mozzarella, sweet basil and cold-pressed olive oil.',
-  },
-  {
-    id: 'quattro',
-    name: 'Quattro Formaggi',
-    price: 64900,
-    art: 'quattro',
-    stock: 'low',
-    tags: ['Bianca'],
-    description: 'Fior di latte, gorgonzola, aged parmigiano, smoked provola, wildflower honey and walnuts.',
-  },
-];
-
 export const PHILOSOPHY = [
   {
     icon: 'grain',

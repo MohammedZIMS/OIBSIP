@@ -52,6 +52,14 @@ test('Order: total must equal subtotal + tax + fees; preset needs a pizza; qty c
   assert.ok((await asyncErrs(new Order(big))).some((k) => k.includes('qty')));
 });
 
+test('Pizza: priceOverride is optional (null is valid) but must be a whole number when set', async () => {
+  const { Pizza } = await import('../../src/models/index.js');
+  const base = { name: 'X', slug: 'x', components: { base: id(), sauce: id(), cheese: id() } };
+  assert.deepEqual(errs(new Pizza(base)), []);
+  assert.ok(errs(new Pizza({ ...base, priceOverride: 99.5 })).includes('priceOverride'));
+  assert.deepEqual(errs(new Pizza({ ...base, priceOverride: 62900 })), []);
+});
+
 test('Payment: unique razorpay ids, integer amount, hidden signature', () => {
   const p = new Payment({ order: id(), user: id(), razorpayOrderId: 'order_1', amount: 100.5 });
   assert.ok(errs(p).includes('amount'));

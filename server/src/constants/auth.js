@@ -7,7 +7,10 @@ export const AUTH = Object.freeze({
   VERIFY_CODE_MAX_ATTEMPTS: 5,
   ADMIN_MAX_FAILED_ATTEMPTS: 5,
   ADMIN_LOCK_MS: 15 * MIN,
-  BCRYPT_COST: 12,
+  BCRYPT_COST: process.env.NODE_ENV === 'test' ? 4 : 12, // low cost only to keep tests fast
+  RESEND_COOLDOWN_MS: 60 * 1000,
   USER_AUDIENCE: 'user',
   ADMIN_AUDIENCE: 'admin',
 });
+
+export const ADMIN_ROLES = Object.freeze({ ADMIN: 'admin', SUPER_ADMIN: 'superadmin' });

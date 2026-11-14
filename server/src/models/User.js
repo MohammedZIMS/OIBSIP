@@ -36,6 +36,7 @@ userSchema.methods.comparePassword = function (plain) {
   return bcrypt.compare(plain, this.passwordHash);
 };
 userSchema.statics.hashPassword = (plain) => bcrypt.hash(plain, AUTH.BCRYPT_COST);
+userSchema.statics.compareHash = (plain, hash) => bcrypt.compare(plain, hash);
 
 userSchema.set('toJSON', {
   transform: (_doc, ret) => {

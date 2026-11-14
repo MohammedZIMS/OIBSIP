@@ -8,7 +8,9 @@
     "build": "vite build",
     "preview": "vite preview",
     "lint": "echo \"lint: configure ESLint in Phase 0\"",
-    "test": "echo \"tests: added from Phase 1\""
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:live": "vitest run tests/live.test.js"
   },
   "dependencies": {
     "react": "^18.3.1",
@@ -16,10 +18,15 @@
     "react-router-dom": "^6.28.0"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.3",
+    "@testing-library/user-event": "^14.6.10",
     "@vitejs/plugin-react": "^4.3.4",
     "autoprefixer": "^10.4.20",
+    "jsdom": "^25.0.1",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.17",
-    "vite": "^5.4.11"
+    "vite": "^5.4.11",
+    "vitest": "^2.1.9"
   }
 }

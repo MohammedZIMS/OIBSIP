@@ -11,7 +11,9 @@ MERN monorepo (React + Vite, Express, MongoDB). See `CLAUDE.md` for working rule
 | Database models (10) and backend architecture | Done (`docs/DATABASE.md`) |
 | Centralized error handling, request validation | Done, 28 tests |
 | Catalogue API (`/api/ingredients`, `/api/pizzas`) | Done |
-| Everything else | Not started (Phase 1 next: authentication) |
+| Authentication and authorization APIs (customer and admin) | Done, 49 tests (`docs/AUTH.md`) |
+| Auth pages in the React app | Not started (next) |
+| Everything else | Not started |
 
 ## Quick start
 
@@ -31,7 +33,7 @@ The client runs on its own with `npm run dev:client`; the Home page uses static 
 ```bash
 npm test -w server                       # unit and HTTP tests (no database needed)
 npm run seed:catalogue -w server         # ingredients and preset pizzas (idempotent)
-npm run seed:admin -w server -- --email you@example.com --password 'LongPassword#1'
+npm run seed:admin -w server -- --email you@example.com --password 'LongPassword#1' --role superadmin
 ```
 
 Use your own MongoDB connection string in `server/.env` (never commit it). Atlas: `mongodb+srv://<user>:<password>@<cluster>.mongodb.net/pizza?retryWrites=true&w=majority`.

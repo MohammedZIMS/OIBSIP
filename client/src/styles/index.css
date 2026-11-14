@@ -14,4 +14,19 @@
   }
 }
 
-.material-symbols-outlined { font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24; }
+/* Shared building blocks. Colors come from the palette; dark: variants apply inside [data-theme=dark] (admin). */
+@layer components {
+  .card { @apply rounded-lg border border-line bg-white shadow-card dark:border-white/10 dark:bg-pan-raised dark:shadow-none; }
+  .muted { @apply text-ink-muted dark:text-ink-dark; }
+  .input { @apply w-full rounded-md border-2 border-toast bg-white px-3 py-2.5 text-pan placeholder:text-ink-muted/70 focus:border-onion dark:border-white/50 dark:bg-pan dark:text-parchment dark:placeholder:text-ink-dark dark:focus:border-cheese; }
+  .input-error { @apply border-tomato dark:border-tomato-soft; }
+  .label { @apply mb-1 block text-sm font-semibold; }
+  .field-error { @apply mt-1 flex items-center gap-1 text-sm font-medium text-tomato dark:text-tomato-soft; }
+  .th { @apply px-4 py-3 text-left text-sm font-semibold; }
+  .td { @apply px-4 py-3 text-sm; }
+  .chip { @apply rounded-full border-2 px-4 py-1.5 text-sm font-semibold transition-colors; }
+  .chip-off { @apply border-toast bg-white text-pan hover:bg-crust/40 dark:border-white/40 dark:bg-transparent dark:text-parchment dark:hover:bg-white/10; }
+  .chip-on { @apply border-onion bg-onion text-parchment dark:border-cheese dark:bg-cheese dark:text-pan; }
+}
+
+.material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }

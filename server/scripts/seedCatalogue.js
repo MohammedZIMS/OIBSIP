@@ -1,3 +1,4 @@
+// Idempotent: safe to run many times. Creates ingredients (with an "initial" ledger row) and preset pizzas.
 import { env } from '../src/config/env.js';
 import { connectDB, disconnectDB } from '../src/config/db.js';
 import { Ingredient, InventoryTransaction, Pizza } from '../src/models/index.js';
